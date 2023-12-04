@@ -1,0 +1,63 @@
+<div class="container mt-5">
+  <h1>Book Inventory</h1>
+  <hr>
+  <div class="d-flex justify-content-end mb-5">
+    <span class="text-muted mt-2 mr-3">Hi! <%= @current_user.role.capitalize() %> <%= @current_user.email %></span>
+    <%= link_to 'New Book', new_book_path, class: 'btn btn-primary mr-2' %>
+    <%= link_to 'Librarian Dashboard', librarian_dashboard_path, class: 'btn btn-success mr-2' %>
+    <%= link_to 'Logout', librarian_logout_path, method: :delete, class: 'btn btn-danger' %>
+  </div>
+
+  <% if @books.present? %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>ISBN</th>
+          <th>Total Copies</th>
+          <th>All Time Borrowed</th>
+          <th>Currently Borrowed</th>
+          <th>Available Copies</th>
+          <th>Actions</th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @books.each do |book| %>
+          <tr>
+            <td><%= book.id %></td>
+            <td><%= book.title %></td>
+            <td><%= book.author %></td>
+            <td><%= book.genre %></td>
+            <td><%= book.isbn %></td>
+            <td><%= book.total_copies %></td>
+            <td><%= book.all_time_borrowed %></td>
+            <td><%= book.currrently_borrowed %></td>
+            <td><%= book.available_copies %></td>
+            <td>
+              <%= link_to 'Borrowings', book_borrowings_path(book), class: 'btn btn-success btn-sm' %>
+            </td>
+            <td>
+              <%= link_to 'Show', book, class: 'btn btn-info btn-sm' %>
+            </td>
+            <td>
+              <%= link_to 'Edit', edit_book_path(book), class: 'btn btn-warning btn-sm' %>
+            </td>
+            <td>
+              <%= form_with(model: book, url: book_path(book), method: :delete) do |form| %>
+                <%= form.submit 'Remove', class: 'btn btn-danger btn-sm' %>
+              <% end %>
+            </td>       
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% else %>
+    <p>No books available.</p>
+  <% end %>
+</div>

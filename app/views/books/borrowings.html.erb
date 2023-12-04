@@ -1,0 +1,39 @@
+<div class="container mt-5">
+  <h1>Borrowings for <%= @book.title %></h1>
+  <hr>
+  <div class="d-flex justify-content-end mb-5">
+    <span class="text-muted mt-2 mr-3">Hi! <%= @current_user.role.capitalize() %> <%= @current_user.email %></span>
+    <%= link_to 'Back to Manage Books', books_path, class: 'btn btn-primary mr-2' %>
+    <%= link_to 'Librarian Dashboard', librarian_dashboard_path, class: 'btn btn-success mr-2' %>
+    <%= link_to 'Logout', librarian_logout_path, method: :delete, class: 'btn btn-danger' %>
+  </div>
+
+  <% if @borrowings.empty? %>
+    <p>No borrowings for this book.</p>
+  <% else %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Borrowed By:</th>
+          <th>Borrowed At:</th>
+          <th>Returned At:</th>
+          <th>Return Book:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @borrowings.each do |borrowing| %>
+          <tr>
+            <td><%= borrowing.user.email %></td>
+            <td><%= borrowing.borrowed_at %></td>
+            <td><%= borrowing.returned_at || 'Not returned' %></td>
+            <td>
+              <% if borrowing.returned_at.nil? %>
+                <%= link_to 'Return Book', return_borrowing_path(borrowing), class: 'btn btn-success btn-sm', method: :post %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  <% end %>
+</div>
