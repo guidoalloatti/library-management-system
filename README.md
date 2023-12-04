@@ -124,6 +124,8 @@ This is a Ruby on Rails web application for managing a library's book inventory 
    - In order to use it you can sign in as one of the two roles: member or librarian. Each different role will have a customized dashboard and will be able to perform different actions.
 
   - **Members Dashboard**
+    ![Member Dashboard](https://github.com/guidoalloatti/library-management-system/blob/main/app/assets/images/member_dashboard.png)
+   
     - In this page, members can:
       - See a list of available books and to borrow one. One member can have only one copy at a time for a paticular title
       - See a list of all the current borrowed books and will be able to return the titles.
@@ -132,6 +134,8 @@ This is a Ruby on Rails web application for managing a library's book inventory 
       - Can logout at any time by clicking the Logout button on the top right corner.
 
   - **Librarians Dashboard**
+    ![Librarian Dashboard](https://github.com/guidoalloatti/library-management-system/blob/main/app/assets/images/librarian_dashboard.png)
+
     - In this page, librarians can:
       - See an overview section on their dasboard which includes information of the total books, total borrowed books and books due today.
       - See a section with the members with Overdue Books.
@@ -140,6 +144,8 @@ This is a Ruby on Rails web application for managing a library's book inventory 
       - Logout at any time with the button on the top right corner.
 
   - **Librarian Books Management**
+    ![book management](https://github.com/guidoalloatti/library-management-system/blob/main/app/assets/images/librarian_books_management.png)
+
     - In this page, librarians can:
       - From the dashboard, the librarian can access the Book Inventory page by clicking on the Manage Books button.
       - See a list of all the books, with detailed information for the title, author, genre, isbn, all time borrowed, currently borrowed and available.
@@ -147,8 +153,10 @@ This is a Ruby on Rails web application for managing a library's book inventory 
       - Create a new book by clicking on the New Book button at the top right corner.
       - Can return to the dashboard at any time by clicking the Librarian Dashboard button on the top right corner.
       - Can logout at any time by clicking the Logout button on the top right corner.
-
+        
   - **Librarian Book Borrowings**
+    ![book borrowings](https://github.com/guidoalloatti/library-management-system/blob/main/app/assets/images/librarian_borrowings.png)
+   
     - In this page, librarians can:
       - From the books management, a librarian can access the Book Borrowings page by clicking the Borrowings button in the actions section for a book.
       - See a list of all the borrowings for the selected book.
