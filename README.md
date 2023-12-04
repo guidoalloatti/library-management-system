@@ -171,7 +171,7 @@ This is a Ruby on Rails web application for managing a library's book inventory 
     - There are alerts and success messages on top for the most important events at system level.
 
 ## Tests 
-  ### Added several unit tests to following entities:
+  ### Using the RSpec GEM, I added several unit tests to following entities:
     - Books
        - Model
        - Api
