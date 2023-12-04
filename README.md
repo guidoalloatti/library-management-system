@@ -3,15 +3,17 @@
 This is a Ruby on Rails web application for managing a library's book inventory and user borrowings.
 
 ## Table of Contents
-
 - [Features](#features)
+  - Authentication and Authorization
+  - Book Management
+  - Borrowing and Returning
+  - Dashboard
+- [API Endpoints](#api-endpoints)
+- [Frontend](#frontend)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Dashboard](#dashboard)
-- [API Endpoints](#api-endpoints)
-- [Frontend](#frontend)
-- [Seeding Data](#seeding-data)
+  - [Data Setup and Start Server](#server)
 
 ## Features
 - **Authentication and Authorization:**
