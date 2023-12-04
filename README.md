@@ -8,13 +8,12 @@ This is a Ruby on Rails web application for managing a library's book inventory 
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
+- [Dashboard](#dashboard)
 - [API Endpoints](#api-endpoints)
-- [Frontend (Optional)](#frontend-optional)
+- [Frontend](#frontend)
 - [Seeding Data](#seeding-data)
 
 ## Features
-
 - **Authentication and Authorization:**
   - Users can register, log in, and log out.
   - Two types of users: Librarian and Member.
@@ -33,7 +32,7 @@ This is a Ruby on Rails web application for managing a library's book inventory 
   - Librarian dashboard shows total books, total borrowed books, books due today, and members with overdue books.
   - Member dashboard shows borrowed books, due dates, and any overdue books.
 
-- **API Endpoints:**
+## API Endpoints
   - RESTful API for CRUD operations on books and borrowings and session management for users.
 
   - **Users**
@@ -118,7 +117,7 @@ This is a Ruby on Rails web application for managing a library's book inventory 
     - Delete a borrow: `DELETE http://localhost:3000/api/borrowings/:borrowing_id`
     - Return a Borrowed Book: `POST http://localhost:3000/api/borrowings/:borrowing_id/return`
 
-- **Frontend:**
+## Frontend
    - Simplified and user-friendly frontend created directly in the rails app.
 
    - In order to use it you can sign in as one of the two roles: member or librarian. Each different role will have a customized dashboard and will be able to perform different actions.
