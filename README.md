@@ -10,6 +10,7 @@ This is a Ruby on Rails web application for managing a library's book inventory 
   - Dashboard
 - [API Endpoints](#api-endpoints)
 - [Frontend](#frontend)
+- [Tests](#tests)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -169,6 +170,18 @@ This is a Ruby on Rails web application for managing a library's book inventory 
   - **Notifications System**
     - There are alerts and success messages on top for the most important events at system level.
 
+## Tests 
+  ### Added several unit tests to following entities:
+    - Books
+       - Model
+       - Api
+       - Controller
+     - Borrowings
+       - Model
+       - Api
+       - Controlle
+     - Users
+ 
 ## Getting Started
 
 ### Prerequisites
